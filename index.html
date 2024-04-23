@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restoran Jawa Bu Marinem</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        select,
+        input[type="number"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #af4c93;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #4585a0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Selamat Datang di Restoran Jawa Bu Marinem</h1>
+        <h2>Restoran ini menyajikan makanan khas Jawa Tengah dari berbagai daerah, Selamat Mencoba!!!</h2>
+        <form action="process_order.php" method="POST">
+            <label for="nama">Nama:</label><br>
+            <input type="text" id="nama" name="nama" required><br>
+            
+            <label for="menu">Menu:</label><br>
+            <select id="menu" name="menu">
+                <option value="Bakmi Jawa">Bakmi Jawa</option>
+                <option value="Tempe Mendoan">Tempe Mendoan</option>
+                <option value="Getuk Goreng">Getuk Goreng</option>
+                <option value="Gudeg">Gudeg</option>
+                <option value="Nasi Tiwul">Serabi</option>
+            </select><br>
+            
+            <label for="jumlah">Jumlah:</label><br>
+            <input type="number" id="jumlah" name="jumlah" min="1" value="1" required><br>
+            
+            <input type="submit" value="Pesan">
+        </form>
+    </div>
+</body>
+</html>
+
+
